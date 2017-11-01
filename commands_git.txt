@@ -9,3 +9,5 @@ git checkout [nombre de la rama] - cambiar de rama
 git checkout -b [nombre de la rama] - crear una nueva ramas
 gitk - historial de todo el repositorio
 git merge [rama] - juntar cambios de una rama externa a tu rama
+git branch -v - muestra todas las ramas
+:q - salir de vim
