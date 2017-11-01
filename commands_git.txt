@@ -1,0 +1,11 @@
+git status - cambios en la rama
+git add . - agregar cambios para subir, . para todos los archivos o la ruta del archivo a subir en su defecto
+git commit -m "im a commit" - subir cambio a mi HEAD en mi rama
+git push - publicar cambio en mi rama
+git pull - importar cambios de una rama
+git stash - tomar los cambios de una rama
+git stash apply - colocar los cambios tomados en git stash
+git checkout [nombre de la rama] - cambiar de rama
+git checkout -b [nombre de la rama] - crear una nueva ramas
+gitk - historial de todo el repositorio
+git merge [rama] - juntar cambios de una rama externa a tu rama
