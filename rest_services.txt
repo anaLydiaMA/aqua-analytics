@@ -1,0 +1,8 @@
+REST
+                              necesitamos     provee
+GET     ver, visualizar,      RUTA            [{},{}]
+POST    crear, realizar       {}              {} ok 200
+PUT     atualizar, cambio     {}              {} OK 200
+DELETE  eliminar              RUTA/tania      {} 404
+
+*mandar status
