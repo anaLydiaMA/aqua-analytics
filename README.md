@@ -1,7 +1,8 @@
 # aqua-container
 #
 ## Lider del Proyecto:
-### Tania
+### Tania Marcela Gutiérrez Godínez
+#### 210689341
 #
 ## Integrantes:
 ### Edna Alejandra Rosas Avila
@@ -10,8 +11,6 @@
 #### 211690238
 ### Angel Isaac Rios Pineda
 #### 211674585
-### Tania Marcela Gutiérrez Godínez
-#### 210689341
 #
 ## Nombre del grupo:
 ### Buitres
