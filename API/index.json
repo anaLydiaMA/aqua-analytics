@@ -1,0 +1,393 @@
+{
+  "informacipnGeneral": {
+    "descripcion": "La API de Indicadores del INEGI permite consultar los datos y metadatos de los indicadores disponibles a nivel nacional, por entidad federativa y municipio. Puede utilizar la API para crear aplicaciones que muestren la información directamente de las bases de datos del INEGI en el preciso momento en que se actualiza.",
+    "link": "http://www.beta.inegi.org.mx/servicios/api_biinegi.html",
+    "sector": 22,
+  },
+  "posiblesConsultas": [
+    {
+      "tema": "Agricultura, ganadería y forestal",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Número y superficie total de los terrenos>Actividad principal del terreno>Actividad Forestal>Número total de terrenos. Productores forestales. Absoluto",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "817"
+        },{
+          "subtema": "Número y superficie total de los terrenos>Actividad principal del terreno>Otra actividad>Número total de terrenos. Otros Productores. Absoluto",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "6435"
+        },{
+          "subtema": "Número y superficie total de los terrenos>Terrenos sin actividad>Número total de terrenos. Sin actividad. Absoluto",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "1449426"
+        },{
+          "subtema": "Número y superficie total de los terrenos>Número total de terrenos. Productores. Absoluto",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "369440"
+        }
+      ]
+    },
+    {
+      "tema": "Construcción",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Total de gastos por consumo de bienes y servicios. Sector 22. Agua y gas.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "5366389"
+        }
+      ]
+    },
+    {
+      "tema": "Empleo y Ocupación",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Población Económicamente Activa (PEA)",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "54068791"
+        },{
+          "subtema": "Producción bruta total por unidad económica.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "2130"
+        }
+      ]
+    },
+    {
+      "tema": "Empresas y Establecimientos",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Acervo total de activos fijos.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "351024726"
+        },{
+          "subtema": "Total de gastos por consumo de bienes y servicios.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "681923771"
+        },{
+          "subtema": "Total de ingresos por suministro de bienes y servicios.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "919628914"
+        },{
+          "subtema": "Unidades económicas",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "264361"
+        },{
+          "subtema": "Unidades económicas. Sector privado y paraestatal (estructura porcentual).",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "7.1"
+        },{
+          "subtema": "Unidades económicas. Sector privado y paraestatal.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "330787"
+        },{
+          "subtema": "Unidades económicas. Universo total (estructura porcentual).",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "6.4"
+        },{
+          "subtema": "Valor agregado censal bruto por personal ocupado total.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "162.35"
+        },{
+          "subtema": "Valor agregado censal bruto.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "241755740"
+        }
+      ]
+    },
+    {
+      "tema": "Finanzas públicas",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Egresos de los municipios. Inversión pública",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "3475655"
+        },{
+          "subtema": "Egresos brutos de los municipios",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "25457433"
+        },{
+          "subtema": "Egresos netos de los municipios",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "24430398"
+        },{
+          "subtema": "Egresos de los municipios. Disponibilidad final",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "1027034"
+        },{
+          "subtema": "Ingresos netos de los municipios",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "25457433"
+        },{
+          "subtema": "Ingresos de los municipios. Impuestos",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "5101453"
+        },{
+          "subtema": "Ingresos de los municipios. Disponibilidad inicial",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "211"
+        }
+      ]
+    },
+    {
+      "tema": "Hogares y Vivienda",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Hogares",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "2059987"
+        },{
+          "subtema": "Población en hogares",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "7844830"
+        },{
+          "subtema": "Gasto corriente total promedio trimestral por hogar en artículos y servicios para la casa",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "6.2"
+        },{
+          "subtema": "Porcentaje de viviendas con agua entubada",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "92.788916"
+        },{
+          "subtema": "Porcentaje de viviendas con drenaje",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "98.151231"
+        },{
+          "subtema": "Tasa de crecimiento promedio anual de las viviendas particulares habitadas",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "2.7"
+        },{
+          "subtema": "Viviendas particulares habitadas que disponen de agua de la red pública en el ámbito de la vivienda",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "1697299"
+        },{
+          "subtema": "Viviendas, de cada cien que cuentan con electricidad, agua y drenaje",
+          "busquedaEstado": true,
+          "busquedaMunicipio": false,
+          "CurrentValue": "92.64777888931698"
+        }
+      ]
+    },
+    {
+      "tema": "Manufacturas",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Total de gastos por consumo de bienes y servicios. Sector 31-33. Industrias manufactureras.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "213362366"
+        },{
+          "subtema": "Total de ingresos por suministro de bienes y servicios. Sector 31-33. Industrias manufactureras",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "313138012"
+        }
+      ]
+    },
+    {
+      "tema": "Medio ambiente",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "400"
+        },{
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento con salida a un canal",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento con salida a un gran colector",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento con salida a un lago o laguna",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento con salida a un río o arroyo",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento con salida al cuerpo de una presa",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento con salida al mar",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de puntos de descarga de aguas residuales municipales sin tratamiento con salida al suelo o barranca",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación con macromedidor funcionando, para abastecimiento público",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación con macromedidor sin funcionar, para abastecimiento público",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación en fuente de abastecimiento tipo canal o dren",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación en fuente de abastecimiento tipo cenote",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación en fuente de abastecimiento tipo galería filtrante",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación en fuente de abastecimiento tipo manantial",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación en fuente de abastecimiento tipo pozo",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación en fuente de abastecimiento tipo presa",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación en fuente de abastecimiento tipo río",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación para abastecimiento público",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad de tomas de agua en operación sin macromedidor, para abastecimiento público",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        },{
+          "subtema": "Cantidad promedio diaria de residuos sólidos urbanos recolectados",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": ""
+        }
+      ]
+    },
+    {
+      "tema": "Servicios no financieros",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "Gastos por consumo de bienes y servicios.",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "147.52639351"
+        },{
+          "subtema": "Total de ingresos por suministro de bienes y servicios. Sector 22. Agua y gas.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "25281024"
+        },{
+          "subtema": "Valor agregado censal bruto por personal ocupado total. Sector 22. Agua y gas.",
+          "busquedaEstado": true,
+          "busquedaMunicipio": true,
+          "CurrentValue": "1155.2"
+        }
+      ]
+    },
+    {
+      "tema": "Estadísticas experimentales",
+      "peticionesRelacionadas": [
+        {
+          "subtema": "INC. Series originales. Caudal de tratamiento de aguas residuales municipales, % uso de agua. Estructura",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "4.44896787864644"
+        },{
+          "subtema": "INC. Series originales. Caudal de tratamiento de aguas residuales municipales, % uso de agua. Variación Anual",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "7.78489582636026"
+        },{
+          "subtema": "INC. Series originales. Cobertura de agua potable, % población. Estructura",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "92.5"
+        },{
+          "subtema": "INC. Series originales. Cobertura de agua potable, % población. Variación Anual",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "0.108225108225099"
+        },{
+          "subtema": "INC. Series originales. Intensidad en el consumo de agua, m3 por millón de dólares del PIB",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "96.3651547239463"
+        },{
+          "subtema": "INC. Series originales. Intensidad en el consumo de agua, m3 por millón de dólares del PIB. Variación Anual",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "17.1815204585611"
+        },{
+          "subtema": "INC. Variables indexadas. Caudal de tratamiento de aguas residuales municipales, % uso de agua. Índice",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "108.668522191509"
+        },{
+          "subtema": "INC. Variables indexadas. Caudal de tratamiento de aguas residuales municipales, % uso de agua. Variación Anual",
+          "busquedaEstado": false,
+          "busquedaMunicipio": false,
+          "CurrentValue": "7.78489582636024"
+        }
+      ]
+    }
+  ],
+  "Mapeo de los datos": {
+    "MunicipiosAMG": ["Guadalajara","Zapopan","San Pedro Tlaquepaque","Tonalá","Tlajomulco de Zúñiga","El Salto","Ixtlahuacán de los Membrillos","Juanacatlán"],
+    "link": "https://www.jalisco.gob.mx/es/jalisco/guadalajara"
+  }
+}
