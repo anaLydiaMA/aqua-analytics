@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+rest_services.txt
+commands_git.txt
