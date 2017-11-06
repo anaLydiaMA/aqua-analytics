@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/anaLydiaMA/aqua-container/issues"
   },
-  "homepage": "https://github.com/anaLydiaMA/aqua-container#readme"
+  "homepage": "https://github.com/anaLydiaMA/aqua-container#readme",
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
 }
