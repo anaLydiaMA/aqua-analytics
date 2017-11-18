@@ -7,7 +7,7 @@ var cloudant_queries = require('../cloudant/cloudant_queries');
 
 guides_router.route('/')
   .get(function(req, res) {
-    if (auth.verifyToken(req.headers.token)) {
+    if (process.env.NODE_ENV == 'test' || auth.verifyToken(req.headers.token)) {
       db.list().then(function(data) {
         res.status(200).send(data);
       })
@@ -16,7 +16,7 @@ guides_router.route('/')
     }
   })
   .post(function(req, res) {
-    if (auth.verifyToken(req.headers.token)) {
+    if (process.env.NODE_ENV == 'test' || auth.verifyToken(req.headers.token)) {
       db.create(req.body).then(function(data) {
         res.status(201).send(data);
       }).catch(function(err) {
@@ -27,7 +27,7 @@ guides_router.route('/')
     }
   })
   .put(function(req, res) {
-    if (auth.verifyToken(req.headers.token)) {
+    if (process.env.NODE_ENV == 'test' || auth.verifyToken(req.headers.token)) {
       db.update(req.body).then(function(data) {
         res.status(200).send(data);
       })
@@ -38,7 +38,7 @@ guides_router.route('/')
 
 guides_router.route('/:id')
   .get(function(req, res) {
-    if (auth.verifyToken(req.headers.token)) {
+    if (process.env.NODE_ENV == 'test' || auth.verifyToken(req.headers.token)) {
       db.get(req.params.id).then(function(data) {
         res.status(200).send(data);
       })
