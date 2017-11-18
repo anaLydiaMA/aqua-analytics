@@ -1,0 +1,68 @@
+[
+  {
+    "subtema": "Porcentaje de viviendas con agua entubada",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "92.788916"
+  },{
+    "subtema": "Porcentaje de viviendas con drenaje",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "98.151231"
+  },{
+    "subtema": "Viviendas particulares habitadas que disponen de agua de la red pública en el ámbito de la vivienda",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "1697299"
+  },{
+    "subtema": "Viviendas, de cada cien que cuentan con electricidad, agua y drenaje",
+    "busquedaEstado": true,
+    "busquedaMunicipio": false,
+    "CurrentValue": "92.64777888931698"
+  },{
+    "subtema": "Población en hogares",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "7844830"
+  },{
+    "subtema": "Total de gastos por consumo de bienes y servicios. Sector 31-33. Industrias manufactureras.",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "213362366"
+  },{
+    "subtema": "Total de ingresos por suministro de bienes y servicios. Sector 31-33. Industrias manufactureras",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "313138012"
+  },{
+    "subtema": "Ingresos netos de los municipios",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "25457433"
+  },{
+    "subtema": "Egresos netos de los municipios",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": "24430398"
+  },{
+    "subtema": "Cantidad de tomas de agua en operación para abastecimiento público",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": ""
+  },{
+    "subtema": "Cantidad de tomas de agua en operación sin macromedidor, para abastecimiento público",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": ""
+  },{
+    "subtema": "Cantidad de tomas de agua en operación con macromedidor funcionando, para abastecimiento público",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": ""
+  },{
+    "subtema": "Cantidad de tomas de agua en operación con macromedidor sin funcionar, para abastecimiento público",
+    "busquedaEstado": true,
+    "busquedaMunicipio": true,
+    "CurrentValue": ""
+  }
+]
