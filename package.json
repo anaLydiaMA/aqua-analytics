@@ -1,8 +1,17 @@
 {
-  "name": "aqua-container",
+  "name": "aqua-containerAPI",
   "version": "1.0.0",
-  "description": "",
-  "main": "example.js",
+  "description": "CUCEI team work",
+  "main": "app.js",
+  "author": "Buitres",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cfenv": "^1.0.4",
+    "cloudant": "^1.8.0",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "promise": "^8.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +26,7 @@
   },
   "homepage": "https://github.com/anaLydiaMA/aqua-container#readme",
   "devDependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "nyc": "^11.2.1"
   }
 }
