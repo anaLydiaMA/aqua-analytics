@@ -1,5 +1,5 @@
 applications:
-- name: aqua-containerAPI
+- name: aqua-container
   random-route: true
   memory: 128M
   command: node app.js
