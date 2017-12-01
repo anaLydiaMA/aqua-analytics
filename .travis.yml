@@ -1,0 +1,12 @@
+dist: trusty
+language: node_js
+node_js:
+  - "6"
+before_install:
+  - chmod +x deployAPP.sh
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: ./deployAPP.sh
+  on:
+    branch: master
