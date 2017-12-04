@@ -1,5 +1,4 @@
 # aqua-container
-===================
 
 ### URL = https://aqua-container.mybluemix.net
 ### **PATH = /users**
