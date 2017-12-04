@@ -1,5 +1,7 @@
 applications:
 - name: aqua-container
-  random-route: true
+  host: aqua-container
   memory: 128M
   command: node app.js
+  env:
+    CLOUDANT_SERVICE_NAME: AQUA
