@@ -1,8 +1,8 @@
 # aqua-container
 ===================
 
-###URL = https://aqua-container.mybluemix.net
-###**PATH = /users**
+### URL = https://aqua-container.mybluemix.net
+### **PATH = /users**
 #### CREATE AN USER
 ##### <i class="icon-pencil"></i> POST
 
@@ -28,7 +28,7 @@ Issue    | Status
 Successful| <kbd>200</kbd>
 Failed    | <kbd>404</kbd>
 ##
-###**PATH = /users/id**
+### **PATH = /users/id**
 #### DELETES A USER
 ##### <i class="icon-trash"></i> DELETE
 ```
@@ -39,7 +39,7 @@ Issue    | Status
 Successful| <kbd>200</kbd>
 Failed    | <kbd>400</kbd>
 ##
-###**PATH = /users/login**
+### **PATH = /users/login**
 #### AUTHENTICATES A USER
 ##### <i class="icon-refresh"></i> POST
 ```
@@ -54,7 +54,7 @@ Issue    | Status
 Successful| <kbd>200</kbd>
 Failed    | <kbd>403</kbd>
 ##
-###**PATH = /data**
+### **PATH = /data**
 #### GETS ALL GRAPHS DATA
 ##### <i class="icon-file"></i> GET
 ```
