@@ -29,9 +29,9 @@ usuarios_router.route('/:id')
     })
   })
 
-usuarios_router.route('/auth')
+usuarios_router.route('/login')
   .post(function(req, res) {
-    db.login(req.body).then(function(data) {
+    db.login(req.body.username,req.body.password).then(function(data) {
       res.status(200).send(data);
     }).catch(function(err) {
       res.status(403).send({});
