@@ -8,8 +8,10 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-var apiRouter = require('./API/src/routes/usuarios_router');
-app.use('/api',apiRouter);
+var users = require('./API/src/routes/usuarios_router');
+var record = require('./API/src/routes/record_router');
+app.use('/users',users);
+app.use('/data',record);
 
 app.listen(port, function(err){
   console.log('running on server on port:'+ port);
