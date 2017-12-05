@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
@@ -13,11 +15,14 @@ import { ChartsModule } from 'ng2-charts';
 import { GraficaComponent } from './graficos/grafica/grafica.component';
 import { TablaComponent } from './graficos/tabla/tabla.component';
 import { GraficacircularComponent } from './graficos/graficacircular/graficacircular.component';
+import { LoginComponent } from './login/login.component';
+import { HttpRequestService } from 'app/servicios/http-request.service';
 
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
   {path: 'Dashboard', component: DashboardComponent},
+  {path: 'Login', component: LoginComponent},
   {path: '**', component: InicioComponent}
 
 ];
@@ -31,15 +36,18 @@ const routes: Routes = [
     DashboardComponent,
     GraficaComponent,
     TablaComponent,
-    GraficacircularComponent
+    GraficacircularComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ HttpRequestService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

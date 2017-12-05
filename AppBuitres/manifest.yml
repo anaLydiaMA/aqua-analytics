@@ -1,0 +1,5 @@
+applications:
+- name: aqua-app
+  host: aqua-app
+  memory: 64M
+  command: ng serve
