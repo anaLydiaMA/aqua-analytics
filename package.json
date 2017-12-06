@@ -23,5 +23,8 @@
     "npm": "3.10.10"
   },
   "author": "CUCEI",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cors": "^2.8.4"
+  }
 }
