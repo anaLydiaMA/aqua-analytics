@@ -1,19 +1,23 @@
-var db = require('../model/db_usuarios');
+var passchecker = require("../model/passcheck");
+//var db = require('../model/db_usuarios');
+var cloudant= require('../cloudant/cloudant_connection').cloudant;
+var db = cloudant.db.use('users');
 
-verifyUser = function (userID) {
-  return new Promise(function(fulfill, reject) {
-    db.get(userID).then(function (data) {
-      if (data) {
-        fulfill(true)
-      }
-      else {
-        reject(false)
-      }
-    }).catch(function (err) {
-      reject(false)
-    })
-  });
-}
+verifyUser = function(username, password){
+  return new Promise(function(fulfill,reject){
+    db.get(username, function(err, data){
+        if(err){
+          reject(false);
+        }else{
+          if(passchecker.passwords_match(data.password,password)){
+            fulfill(true);
+          }else{
+            reject(false);
+          }
+        }
+      });
+  })
+};
 
 module.exports = {
   verifyUser: verifyUser
