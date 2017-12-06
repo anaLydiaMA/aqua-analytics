@@ -49,14 +49,19 @@ Successful| <kbd>200</kbd>
 Failed    | <kbd>403</kbd>
 ##
 ### **PATH = /data**
-#### **[GET]**  GETS ALL GRAPHS DATA
+#### **[POST]**  GETS ALL GRAPHS DATA
 ```
-NOT REQUIRED
+body:
+{
+	"username": "name",
+	"password": "pass"
+}
 ```
 Issue    | Status
 -------- | ---
 Successful| <kbd>200</kbd>
 Failed    | <kbd>404</kbd>
+Forbidden | <kbd>403</kbd>
 ##
 ##
 ##
