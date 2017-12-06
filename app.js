@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
 //require ('./src/config/express')(app);
 var port = process.env.PORT || 5000;
@@ -7,6 +8,7 @@ var bodyParser = require('body-parser');
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors());
 
 var users = require('./API/src/routes/usuarios_router');
 var record = require('./API/src/routes/record_router');
