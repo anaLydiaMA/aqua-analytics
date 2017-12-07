@@ -48,7 +48,7 @@ Issue    | Status
 Successful| <kbd>200</kbd>
 Failed    | <kbd>403</kbd>
 ##
-### **PATH = /data**
+### **PATH = /data/id**
 #### **[POST]**  GETS ALL GRAPHS DATA
 ```
 body:
@@ -56,6 +56,9 @@ body:
 	"username": "name",
 	"password": "pass"
 }
+
+route: id= Category name
+       categories: OVERVIEW, FACILITIES, SITUATION OF HOUSING, POPULATION, ECONOMIC ACTIVITY, ENVIROMENTAL CARE, ABOUT JALISCO, ABOUT MEXICO
 ```
 Issue    | Status
 -------- | ---
