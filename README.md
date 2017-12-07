@@ -49,7 +49,7 @@ Successful| <kbd>200</kbd>
 Failed    | <kbd>403</kbd>
 ##
 ### **PATH = /data/id**
-#### **[POST]**  GETS ALL GRAPHS DATA
+#### **[POST]**  GETS EACH CATEGORY DATA
 ```
 body:
 {
