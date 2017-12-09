@@ -28,7 +28,7 @@
           <i class="fa fa-exclamation-circle uncheck"
                *ngIf="userForm.controls.password.invalid &&
                userForm.controls.password.touched"></i>
-          <input type="password"
+          <input type="text"
                  class="form-control"
                  id="password"
                  formControlName="password">
@@ -50,5 +50,3 @@
    </div>
 </div>
 
-<tr *ngFor="let user of user2 ">
-  <td>{{ user.username }}</td>

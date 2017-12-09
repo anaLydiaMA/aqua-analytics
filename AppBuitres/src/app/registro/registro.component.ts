@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpRequestService } from '../servicios/http-request.service';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
 })
-export class LoginComponent implements OnInit {
-
+export class RegistroComponent implements OnInit {
   userForm: FormGroup;
   user: any;
   username: any;
-  user2: any[] = [];
   password: any;
 
   constructor(private uf: FormBuilder, private httpRequestService: HttpRequestService) { }
@@ -34,12 +34,10 @@ export class LoginComponent implements OnInit {
 
 onSubmit() {
         this.user = this.saveUser();
-        this.user2 = [];
-        this.httpRequestService.httpPost( this.user , 'https://aqua-container.mybluemix.net/users/login' )
-           .subscribe(newuser => {
-              this.user2.push(newuser);
+        this.httpRequestService.httpPost( this.user, 'https://aqua-container.mybluemix.net/users/login' )
+            .subscribe(newpres => {
             })
-              this.userForm.reset();
+            this.userForm.reset();
       }
 
       saveUser() {
@@ -49,5 +47,4 @@ onSubmit() {
         };
         return saveUser;
       }
-
 }
