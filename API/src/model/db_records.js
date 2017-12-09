@@ -30,9 +30,31 @@ var functions = (function() {
             {'municipio': 'Ixtlahuacán de los Membrillos','value': 5},
             {'municipio': 'Juanacatlán','value': 2}
           ];
-          for (i in object.data){
-            //all algotitm
-          }
+
+          //OVERVIEW: the lowest 4
+          console.log(object.data[0]);
+
+          //FACILITIES: the greatest 4
+          /*
+          Tlajomulco
+          Zapopan
+          Ixtlahuacan
+          San Pedro
+          */
+          console.log(object.data[1]);
+
+          // SITUATION OF HOUSING: porcentaje de 1 vs los demas, the greatest 4 o 5* porcentaje de los demas
+          console.log(object.data[2]);
+
+          // POPULATION: the greatest 3
+          console.log(object.data[3]);
+
+          // ECONOMIC ACTIVITY: the greatest 5
+          console.log(object.data[4]);
+
+          // ENVIROMENTAL CARE: lowest 3
+          console.log(object.data[5]);
+
           var pos = 'Juanacatlán';
           results[municipios.indexOf(pos)].value++;
           results.sort(function(a, b){
@@ -44,7 +66,7 @@ var functions = (function() {
           top.push(results[2].municipio);
           fulfill(top);
         } else {
-          reject(204);
+          reject(404);
         }
       });
     });
