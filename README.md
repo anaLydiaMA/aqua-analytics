@@ -66,6 +66,20 @@ Successful| <kbd>200</kbd>
 Failed    | <kbd>404</kbd>
 Forbidden | <kbd>403</kbd>
 ##
+### **PATH = /data/rating**
+#### **[POST]**  GETS THE BEST MUNICIPALITIES TO INVEST (TOP 3)
+```
+body:
+{
+	"username": "name",
+	"password": "pass"
+}
+```
+Issue    | Status
+-------- | ---
+Successful| <kbd>200</kbd>
+Failed    | <kbd>404</kbd>
+Forbidden | <kbd>403</kbd>
 ##
 ##
 ## Leader:
