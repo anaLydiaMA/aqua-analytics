@@ -14,8 +14,66 @@ var functions = (function() {
       });
     });
   }
+
+  var rating = function(doc) {
+    return new Promise(function(fulfill, reject) {
+      db.get('GRAPHS', function(err, object) {
+        if (object) {
+          var municipios = ['Guadalajara','Zapopan','San Pedro Tlaquepaque','Tonalá','Tlajomulco de Zúñiga','El Salto','Ixtlahuacán de los Membrillos','Juanacatlán'];
+          var results = [
+            {'municipio': 'Guadalajara','value': 1},
+            {'municipio': 'Zapopan','value': 4},
+            {'municipio': 'San Pedro Tlaquepaque','value': 7},
+            {'municipio': 'Tonalá','value': 0},
+            {'municipio': 'Tlajomulco de Zúñiga','value': 3},
+            {'municipio': 'El Salto','value': 4},
+            {'municipio': 'Ixtlahuacán de los Membrillos','value': 5},
+            {'municipio': 'Juanacatlán','value': 2}
+          ];
+
+          //OVERVIEW: the lowest 4
+          console.log(object.data[0]);
+
+          //FACILITIES: the greatest 4
+          /*
+          Tlajomulco
+          Zapopan
+          Ixtlahuacan
+          San Pedro
+          */
+          console.log(object.data[1]);
+
+          // SITUATION OF HOUSING: porcentaje de 1 vs los demas, the greatest 4 o 5* porcentaje de los demas
+          console.log(object.data[2]);
+
+          // POPULATION: the greatest 3
+          console.log(object.data[3]);
+
+          // ECONOMIC ACTIVITY: the greatest 5
+          console.log(object.data[4]);
+
+          // ENVIROMENTAL CARE: lowest 3
+          console.log(object.data[5]);
+
+          var pos = 'Juanacatlán';
+          results[municipios.indexOf(pos)].value++;
+          results.sort(function(a, b){
+              return b.value - a.value;
+          });
+          var top = [];
+          top.push(results[0].municipio);
+          top.push(results[1].municipio);
+          top.push(results[2].municipio);
+          fulfill(top);
+        } else {
+          reject(404);
+        }
+      });
+    });
+  }
   return {
-    'get': get
+    'get': get,
+    'rating': rating
   };
 
 })();
