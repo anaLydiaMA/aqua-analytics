@@ -73,15 +73,16 @@ var functions = (function() {
       if(!username || !password){
         reject(400);
       }else{
+        var aux = {
+          "username": username,
+          "password" : password
+        }
         db.get(username, function(err, data){
           if(err){
             reject(403);
           }else{
             if(passchecker.passwords_match(data.password,password)){
-              delete data.password;
-              delete data._rev;
-              delete data._id;
-              fulfill(data);
+              fulfill(aux);
             }else{
               reject(403);
             }
