@@ -42,7 +42,7 @@ onSubmit() {
         this.httpRequestService.httpPost( this.user , this.URL )
            .subscribe(newuser => {
                this.httpRequestService.User = this.user;
-               if (newuser.username === this.user.username ) {
+               if (this.httpRequestService.Acceso === true ) {
                this.router.navigate(['/Inicio']);
                this.httpRequestService.Acceso = true;
                }

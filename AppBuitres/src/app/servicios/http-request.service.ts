@@ -16,6 +16,7 @@ export class HttpRequestService {
       const headers = new Headers({'Content-Type': 'application/json'});
       return this.http.post( URL , newuser, { headers: headers })
         .map( res => {
+          this.Acceso = true;
            console.log(res.json());
           return res.json();
           }, err => { this.Acceso = false; } );
