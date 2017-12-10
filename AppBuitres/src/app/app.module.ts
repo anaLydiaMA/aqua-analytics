@@ -15,14 +15,15 @@ import { GraficaComponent } from './graficos/grafica/grafica.component';
 import { TablaComponent } from './graficos/tabla/tabla.component';
 import { GraficacircularComponent } from './graficos/graficacircular/graficacircular.component';
 import { LoginComponent } from './login/login.component';
-import { HttpRequestService } from 'app/servicios/http-request.service';
+import { HttpRequestService } from './servicios/http-request.service';
 import { RegistroComponent } from './registro/registro.component';
+import { GuardService } from './servicios/guard.service';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
-  {path: 'Login', component: LoginComponent },
+  {path: 'Login', component: LoginComponent},
   {path: 'Inicio', component: InicioComponent },
-  {path: 'Dashboard', component: DashboardComponent},
+  {path: 'Dashboard', component: DashboardComponent , canActivate: [GuardService]  },
   {path: '**', component: InicioComponent}
 
 ];
@@ -47,7 +48,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [ HttpRequestService ],
-  bootstrap: [ AppComponent ]
+  providers: [ HttpRequestService,
+                GuardService],
+  bootstrap: [ AppComponent],
 })
 export class AppModule { }
