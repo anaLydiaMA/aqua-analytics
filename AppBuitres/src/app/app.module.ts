@@ -19,9 +19,10 @@ import { HttpRequestService } from 'app/servicios/http-request.service';
 import { RegistroComponent } from './registro/registro.component';
 
 const routes: Routes = [
-  {path: '', component: InicioComponent},
+  {path: '', component: LoginComponent},
+  {path: 'Login', component: LoginComponent },
+  {path: 'Inicio', component: InicioComponent },
   {path: 'Dashboard', component: DashboardComponent},
-  {path: 'Login', component: LoginComponent},
   {path: '**', component: InicioComponent}
 
 ];

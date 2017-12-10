@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpRequestService } from '../servicios/http-request.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,9 @@ export class LoginComponent implements OnInit {
   password: any;
   URL = 'https://aqua-container.mybluemix.net/users/login';
 
-  constructor(private uf: FormBuilder, private httpRequestService: HttpRequestService) { }
+  constructor(private uf: FormBuilder, private httpRequestService: HttpRequestService,
+              private router: Router,
+              private activatedRouter: ActivatedRoute) { }
 
   ngOnInit() {
     this.userForm = this.uf.group({
@@ -35,12 +38,14 @@ export class LoginComponent implements OnInit {
 
 onSubmit() {
         this.user = this.saveUser();
+        this.httpRequestService.Acceso = false;
         this.httpRequestService.httpPost( this.user , this.URL )
            .subscribe(newuser => {
                this.httpRequestService.User = this.user;
-               this.httpRequestService.Acceso = 'True';
-               this.userResult = [];
-               this.userResult.push( this.httpRequestService.Acceso );
+               if (newuser.username === this.user.username ) {
+               this.router.navigate(['/Inicio']);
+               this.httpRequestService.Acceso = true;
+               }
             })
               this.userForm.reset();
       }
