@@ -11,9 +11,10 @@ export class LoginComponent implements OnInit {
 
   userForm: FormGroup;
   user: any;
+  userResult: any[] = [];
   username: any;
-  user2: any[] = [];
   password: any;
+  URL = 'https://aqua-container.mybluemix.net/users/login';
 
   constructor(private uf: FormBuilder, private httpRequestService: HttpRequestService) { }
 
@@ -34,10 +35,12 @@ export class LoginComponent implements OnInit {
 
 onSubmit() {
         this.user = this.saveUser();
-        this.user2 = [];
-        this.httpRequestService.httpPost( this.user , 'https://aqua-container.mybluemix.net/users/login' )
+        this.httpRequestService.httpPost( this.user , this.URL )
            .subscribe(newuser => {
-              this.user2.push(newuser);
+               this.httpRequestService.User = this.user;
+               this.httpRequestService.Acceso = 'True';
+               this.userResult = [];
+               this.userResult.push( this.httpRequestService.Acceso );
             })
               this.userForm.reset();
       }

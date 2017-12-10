@@ -7,6 +7,10 @@ export class HttpRequestService {
 
     constructor(private http: Http ) { }
 
+  URL = 'https://aqua-container.mybluemix.net/users/login';
+  User: any;
+  Acceso: any = 'False';
+
     httpPost ( user: any, URL: string)  {
       const newuser = JSON.stringify(user);
       const headers = new Headers({'Content-Type': 'application/json'});
@@ -14,7 +18,7 @@ export class HttpRequestService {
         .map( res => {
            console.log(res.json());
           return res.json();
-          })
+          }, err => { this.Acceso = 'False'; } );
     }
 
     httpGet( url: string) {
@@ -23,5 +27,4 @@ export class HttpRequestService {
         res => res.json()
       )
     }
-
 }
