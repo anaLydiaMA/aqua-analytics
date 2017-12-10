@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpRequestService } from '../servicios/http-request.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpRequestService: HttpRequestService,
+              private router: Router,
+              private activatedRouter: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  isAuth() {
+    return this.httpRequestService.Acceso;
+  }
+
+  onLogout() {
+    this.httpRequestService.Acceso = false ;
+    this.router.navigate(['/inicio']);
   }
 
 }
