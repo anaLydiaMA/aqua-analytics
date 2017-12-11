@@ -18,6 +18,15 @@ import { LoginComponent } from './login/login.component';
 import { HttpRequestService } from './servicios/http-request.service';
 import { RegistroComponent } from './registro/registro.component';
 import { GuardService } from './servicios/guard.service';
+import { GraficaService } from './servicios/grafica.service';
+import { OverviewComponent } from './categorias/overview/overview.component';
+import { FacilitiesComponent } from './categorias/facilities/facilities.component';
+import { HousingComponent } from './categorias/housing/housing.component';
+import { PopulationComponent } from './categorias/population/population.component';
+import { EconomicComponent } from './categorias/economic/economic.component';
+import { WnviromentalComponent } from './categorias/wnviromental/wnviromental.component';
+import { JaliscoComponent } from './categorias/jalisco/jalisco.component';
+import { MexicoComponent } from './categorias/mexico/mexico.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -38,7 +47,15 @@ const routes: Routes = [
     TablaComponent,
     GraficacircularComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    OverviewComponent,
+    FacilitiesComponent,
+    HousingComponent,
+    PopulationComponent,
+    EconomicComponent,
+    WnviromentalComponent,
+    JaliscoComponent,
+    MexicoComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +66,8 @@ const routes: Routes = [
     HttpModule
   ],
   providers: [ HttpRequestService,
-                GuardService],
+                GuardService,
+                GraficaService],
   bootstrap: [ AppComponent],
 })
 export class AppModule { }

@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">ENVIRONMENTAL CARE</div>
+    <div style="display: block;">
+        <canvas baseChart
+        [data]="roundChartData"
+        [labels]="roundChartLabels"
+        [chartType]="roundChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+</div>
+<button style="display: inline-block">Change Graph type</button>
+<hr>

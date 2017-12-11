@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpRequestService } from '../.././servicios/http-request.service';
 
 @Component({
   selector: 'app-graficacircular',
@@ -7,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraficacircularComponent {
 
-  public roundChartType: string = 'pie';
-   public roundChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-   public roundChartData: number[] = [300, 500, 100];
+  constructor (private httpRequestService: HttpRequestService) { this.getGraficaCircular(); }
 
-   public randomizeType(): void {
-     this.roundChartType = this.roundChartType === 'polarArea' ? 'pie' : 'polarArea';
-   }
+  URL= 'https://aqua-container.mybluemix.net';
+   public roundChartType= '';
+   public roundChartLabels: string[] = [];
+   public roundChartData: number[] = [];
 
    public chartClicked(e: any): void {
      console.log(e);
@@ -22,5 +22,14 @@ export class GraficacircularComponent {
    public chartHovered(e: any): void {
      console.log(e);
    }
+
+   getGraficaCircular() {
+    this.URL.concat('');
+    this.httpRequestService.httpPost( this.httpRequestService.User  , this.httpRequestService.URL )
+    .subscribe(newuser => {
+      this.roundChartLabels = newuser.roundChartLabels;
+      this.roundChartData = newuser.roundChartData;
+     });
+      }
 
 }

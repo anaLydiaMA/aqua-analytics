@@ -17,7 +17,6 @@ export class HttpRequestService {
       return this.http.post( URL , newuser, { headers: headers })
         .map( res => {
           this.Acceso = true;
-           console.log(res.json());
           return res.json();
           }, err => { this.Acceso = false; } );
     }
@@ -28,4 +27,14 @@ export class HttpRequestService {
         res => res.json()
       )
     }
+
+    httpPostGraficas ( URL: string)  {
+      const newuser = JSON.stringify(this.User);
+      const headers = new Headers({'Content-Type': 'application/json'});
+      return this.http.post( URL , newuser, { headers: headers })
+        .map( res => {
+          return res.json();
+          });
+    }
+
 }
