@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpRequestService } from '../.././servicios/http-request.service';
+import { BaseChartDirective, ChartsModule } from 'ng2-charts';
 
 @Component({
   selector: 'app-overview',

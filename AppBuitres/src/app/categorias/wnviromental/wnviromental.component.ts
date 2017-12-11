@@ -10,8 +10,14 @@ import { BaseChartDirective, ChartsModule } from 'ng2-charts';
 export class WnviromentalComponent implements OnInit {
   URL= 'https://aqua-container.mybluemix.net/data/ENVIRONMENTAL CARE';
   public roundChartType= 'pie';
-  public roundChartLabels: string[] = ['GDL', 'Zapopan', 'Tlaquepaque',
-  'Tonalá', 'Tlj de Zúñiga', 'El Salto', 'Ixtlahuacán de los Membrillos', 'Juanacatlán'];
+  public roundChartLabels: string[] = ['Guadalajara',
+  'Zapopan',
+  'San Pedro Tlaquepaque',
+  'Tonalá',
+  'Tlajomulco de Zúñiga',
+  'El Salto',
+  'Ixtlahuacán de los Membrillos',
+  'Juanacatlán'];
   public roundChartData: number[] = [13, 0, 5, 3, 0, 1, 3, 4];
 
   backgroundColor: [
@@ -49,7 +55,6 @@ export class WnviromentalComponent implements OnInit {
       this.roundChartLabels = [];
       this.roundChartLabels = newuser.roundChartLabels;
       this.roundChartData = newuser.roundChartData;
-      console.log(newuser.roundChartLabels);
      });
   }
 

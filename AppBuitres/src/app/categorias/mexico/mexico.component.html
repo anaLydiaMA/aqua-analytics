@@ -1,3 +1,13 @@
-<p>
-  mexico works!
-</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">ABOUT MEXICO</div>
+    <div style="display: block;">
+        <canvas baseChart
+        [data]="roundChartData"
+        [labels]="roundChartLabels"
+        [chartType]="roundChartType"
+        [legend]="roundChartLegend"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+</div>

@@ -16,6 +16,8 @@ export class GraficaService {
   public lineChartOptions: any = {
     responsive: true,
   };
+  public any: any;
+  public string: string[];
   public lineChartLabels: Array<any> = [];
   public lineChartLegend = true;
   public lineChartType = '';
@@ -41,11 +43,30 @@ export class GraficaService {
      });
       }
 
-   getGraficaCircular(URL: string) {
-        this.httpRequestService.httpPostGraficas( this.URL)
+   getGraficaCircularlabels(URL: string) {
+        return this.httpRequestService.httpPostGraficas( this.URL)
         .subscribe(newuser => {
-          this.roundChartLabels = newuser.roundChartLabels;
-          this.roundChartData = newuser.roundChartData;
+         return this.roundChartLabels;
          });
           }
+
+    getroundData(URL: string) {
+      this.any = this.getGraficaCircularlabels(URL.toString());
+      this.string = this.any.getGraficaCircularData.toString();
+      return this.string;
+    }
+
+    getGraficaCircularData(URL: string) {
+            this.httpRequestService.httpPostGraficas( this.URL)
+            .subscribe(newuser => {
+             return this.roundChartData;
+             });
+              }
+
+    getGrafica(URL: string) {
+                return this.httpRequestService.httpPostGraficas( URL)
+                .subscribe(newuser => {
+                 return newuser;
+                 });
+                  }
 }
