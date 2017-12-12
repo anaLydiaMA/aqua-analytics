@@ -1,13 +1,10 @@
-<div class="panel panel-primary">
-  <div class="panel-heading">ABOUT JALISCO</div>
-    <div style="display: block;">
-        <canvas baseChart
-        [data]="roundChartData"
-        [labels]="roundChartLabels"
-        [chartType]="roundChartType"
-        [legend]="roundChartLegend"
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)">
-      </canvas>
-    </div>
-</div>
+<h3>
+  ABOUT JALISCO
+</h3>
+<fusioncharts
+[width]="width"
+[height]="height"
+[type]="type"
+[dataFormat]="dataFormat"
+[dataSource]="dataSource">
+</fusioncharts>

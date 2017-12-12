@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpRequestService } from '../.././servicios/http-request.service';
-import { BaseChartDirective, ChartsModule } from 'ng2-charts';
 
 @Component({
   selector: 'app-economic',
@@ -9,41 +8,22 @@ import { BaseChartDirective, ChartsModule } from 'ng2-charts';
 })
 export class EconomicComponent implements OnInit {
 
-  URL= 'https://aqua-container.mybluemix.net/data/ECONOMIC ACTIVITY';
-  public roundChartType= 'pie';
-  public roundChartLabels: string[] = ['Guadalajara',
-  'Zapopan',
-  'San Pedro Tlaquepaque',
-  'Tonalá',
-  'Tlajomulco de Zúñiga',
-  'El Salto',
-  'Ixtlahuacán de los Membrillos',
-  'Juanacatlán'];
-  public roundChartData: number[] = [ 95446938,
-    60145563,
-    19468600,
-    2111399,
-    8592779,
-    10831506,
-    1783499,
-    36768 ];
+  URL= 'https://aqua-container.mybluemix.net/data/new/ECONOMIC ACTIVITY';
 
   constructor (private httpRequestService: HttpRequestService) {
   }
 
-  public chartClicked(e: any): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any): void {
-    console.log(e);
-  }
+  width = 1100;
+  height = 500;
+  type = 'pie3d';
+  dataFormat = 'json';
+  dataSource;
+  title = 'Angular4 FusionCharts Sample';
 
   ngOnInit() {
     this.httpRequestService.httpPostGraficas(this.URL )
     .subscribe(newuser => {
-      this.roundChartLabels = newuser.roundChartLabels;
-      this.roundChartData = newuser.roundChartData;
+      this.dataSource  = newuser;
      });
   }
 

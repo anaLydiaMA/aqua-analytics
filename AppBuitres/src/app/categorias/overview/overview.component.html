@@ -1,14 +1,10 @@
-<div class="panel panel-primary">
-  <div class="panel-heading">OVERVIEW</div>
-    <div style="display: block;">
-      <canvas baseChart width="800" height="400"
-              [datasets]="lineChartData"
-              [labels]="lineChartLabels"
-              [options]="lineChartOptions"
-              [legend]="lineChartLegend"
-              [chartType]="lineChartType"
-              (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)">
-      </canvas>
-    </div>
-</div>
+<h3>
+  OVERVIEW
+</h3>
+<fusioncharts
+[width]="width"
+[height]="height"
+[type]="type"
+[dataFormat]="dataFormat"
+[dataSource]="dataSource">
+</fusioncharts>

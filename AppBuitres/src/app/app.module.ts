@@ -5,7 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import * as FusionCharts from 'fusioncharts';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
 
+
+import { FusionChartsModule } from 'angular4-fusioncharts';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HeaderComponent } from './header/header.component';
@@ -37,6 +42,8 @@ const routes: Routes = [
 
 ];
 
+FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +70,8 @@ const routes: Routes = [
     FormsModule,
     ChartsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    FusionChartsModule
   ],
   providers: [ HttpRequestService,
                 GuardService,
