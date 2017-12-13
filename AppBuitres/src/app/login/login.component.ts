@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.userForm = this.uf.group({
       username: ['', Validators.required ],
-      password: ['', [ Validators.required, Validators.minLength(8)] ],
+      password: ['', [ Validators.required, Validators.minLength(6)] ],
     });
     this.onChanges();
   }

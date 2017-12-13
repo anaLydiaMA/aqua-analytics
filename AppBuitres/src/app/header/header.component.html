@@ -11,7 +11,7 @@
     <ul class="navbar-nav mr-auto w-100 justify-content-end">
       <li class="nav-item" routerLinkActive="active"
           [routerLinkActiveOptions]="{exact:true}" *ngIf= "isAuth()" >
-          <a class="nav-link" routerLink="/">Inicio </a>
+          <a class="nav-link" routerLink="/">Homepage</a>
       </li>
       <li class="nav-item" routerLinkActive="active" *ngIf= "isAuth()" >
           <a class="nav-link" routerLink="/Dashboard">DashBoard</a>
@@ -21,7 +21,7 @@
       </li>
       <li class="nav-item" routerLinkActive="active">
         <button class="btn btn-primary"
-                (click)="onLogout()" *ngIf= "isAuth()">Cerrar sesion</button>
+                (click)="onLogout()" *ngIf= "isAuth()">Sign off</button>
       </li>
     </ul>
 </div>

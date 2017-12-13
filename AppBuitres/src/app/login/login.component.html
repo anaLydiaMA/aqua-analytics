@@ -1,55 +1,52 @@
-
-
 <div class="row">
-  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
-    <h1>Login </h1>
-    <hr>
-    <a class="btn btn-primary float-md-right" routerLink="/">
-      Return to init
-    </a>
-    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">
+      <h1>Login </h1>
+      <hr>
+      <a class="btn btn-primary float-md-right" routerLink="/">
+        Return to homepage
+      </a>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+            <label for="username">Username</label>
+            <i class="fa fa-check-circle check"
+                 *ngIf="userForm.controls.username.valid"></i>
+            <i class="fa fa-exclamation-circle uncheck"
+                 *ngIf="userForm.controls.username.invalid &&
+                        userForm.controls.username.touched"></i>
+            <input type="text"
+                   class="form-control"
+                   id="username"
+                   formControlName="username">
+            <p class="alert alert-danger" *ngIf="userForm.controls.username.invalid &&
+                      userForm.controls.username.touched">
+                      The user field is required.
+            </p>
+          </div>
           <div class="form-group">
-          <label for="username">Username</label>
+            <label for="password">Password</label>
           <i class="fa fa-check-circle check"
-               *ngIf="userForm.controls.username.valid"></i>
-          <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="userForm.controls.username.invalid &&
-                      userForm.controls.username.touched"></i>
-          <input type="text"
-                 class="form-control"
-                 id="username"
-                 formControlName="username">
-          <p class="alert alert-danger" *ngIf="userForm.controls.username.invalid &&
-                    userForm.controls.username.touched">
-                    The user field is required.
+                 *ngIf="userForm.controls.password.valid"></i>
+            <i class="fa fa-exclamation-circle uncheck"
+                 *ngIf="userForm.controls.password.invalid &&
+                 userForm.controls.password.touched"></i>
+            <input type="password"
+                   class="form-control"
+                   id="password"
+                   formControlName="password">
+            <p class="alert alert-danger" *ngIf="userForm.controls.password.invalid &&
+                   userForm.controls.password.touched">
+                   The password field is required.
+            </p>
+          </div>
+          <button type="submit"
+                class="btn btn-primary"
+                [disabled]="!userForm.valid"
+                > Login</button>
+          <a class="btn btn-danger" routerLink="/">Cancel</a>
+          <p class="alert alert-danger" *ngIf="!userForm.valid">
+              Please complete all fields
           </p>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-        <i class="fa fa-check-circle check"
-               *ngIf="userForm.controls.password.valid"></i>
-          <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="userForm.controls.password.invalid &&
-               userForm.controls.password.touched"></i>
-          <input type="password"
-                 class="form-control"
-                 id="password"
-                 formControlName="password">
-          <p class="alert alert-danger" *ngIf="userForm.controls.password.invalid &&
-                 userForm.controls.password.touched">
-                 The password field is required.
-          </p>
-        </div>
-        <button type="submit"
-              class="btn btn-primary"
-              [disabled]="!userForm.valid"
-              > Login</button>
-        <a class="btn btn-danger" routerLink="/">Cancelar</a>
-        <p class="alert alert-danger" *ngIf="!userForm.valid">
-            Please complete all fields
-        </p>
-    </form>
-    <hr>
-   </div>
-</div>
-
+      </form>
+      <hr>
+     </div>
+  </div>

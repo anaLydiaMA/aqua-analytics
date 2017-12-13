@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AppBuitres</title>
+  <title>Aqua Container</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,9 +26,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });
+      </script>
 
 </head>
 <body>
-  <app-root></app-root>
+  <app-root><p>Cargando aplicación…</p></app-root>
 </body>
 </html>
