@@ -1,41 +1,79 @@
-<app-header></app-header>
-<div class="container">
-  <div class="col-md-6" >
-    <app-overview></app-overview>
+<nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md">
+    <button class="navbar-toggler navbar-toggler-right"
+      type="button" data-toggle="collapse" data-target="#containerNavbar"
+      aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">AQUA CONTAINER</a>
+
+
+    <div class="collapse navbar-collapse bg-dark navbar-dark fixed-top" id="containerNavbar">
+      <ul class="navbar-nav mr-auto w-100 justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section1">OVERVIEW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section2">FACILITIES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section3">SITUATION OF HOUSING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section4">POPULATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section5">ECONOMIC ACTIVITY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section6">ENVIRONMENTAL CARE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section7">ABOUT JALISCO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard#section8">ABOUT MEXICO</a>
+          </li>
+            <li class="nav-item" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" routerLink="/">Inicio </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <button class="btn btn-primary"
+                  (click)="onLogout()" *ngIf= "isAuth()">Cerrar sesion</button>
+        </li>
+      </ul>
   </div>
-  <div class="container">
-  </div>
-  <div class="col-md-6" >
-    <app-economic></app-economic>
-  </div>
+  </nav>
+
+<div id="section1" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+  <h1>OVERVIEW</h1>
+  <app-overview></app-overview>
 </div>
-<div class="container">
-  <div class="col-md-6" >
+<div id="section2" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
+  <h1>FACILITIES</h1>
+  <app-facilities></app-facilities>
+</div>
+<div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+  <h1>SITUATION OF HOUSING</h1>
+  <app-housing></app-housing>
+</div>
+<div id="section4" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+  <h1>POPULATION</h1>
+  <app-population></app-population>
+</div>
+<div id="section5" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
+  <h1>ECONOMIC ACTIVITY</h1>
+  <app-economic></app-economic>
+</div>
+<div id="section6" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+    <h1>ENVIRONMENTAL CARE</h1>
     <app-wnviromental></app-wnviromental>
   </div>
-</div>
-<div class="container">
-  <div class="col-md-6" >
-    <app-population></app-population>
-  </div>
-</div>
-<div class="container">
-  <div class="col-md-6" >
-    <app-facilities></app-facilities>
-  </div>
-</div>
-<div class="container">
-  <div class="col-md-6" >
-    <app-housing></app-housing>
-  </div>
-</div>
-<div class="container">
-  <div class="col-md-6" >
+  <div id="section7" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+    <h1>ABOUT JALISCO</h1>
     <app-jalisco></app-jalisco>
   </div>
-</div>
-<div class="container">
-  <div class="col-md-6" >
+  <div id="section8" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+    <h1>ABOUT MEXICO</h1>
     <app-mexico></app-mexico>
   </div>
-</div>

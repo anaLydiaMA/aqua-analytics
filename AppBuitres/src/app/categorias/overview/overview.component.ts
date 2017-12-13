@@ -13,7 +13,7 @@ export class OverviewComponent implements OnInit {
 
     URL= 'https://aqua-container.mybluemix.net/data/new/OVERVIEW';
 
-    width = 1100;
+    width = 1083;
     height = 500;
     type = 'mscombi2d';
     dataFormat = 'json';

@@ -11,7 +11,7 @@ import { BaseChartDirective, ChartsModule } from 'ng2-charts';
 export class MexicoComponent implements OnInit {
   URL= 'https://aqua-container.mybluemix.net/data/new/ABOUT MEXICO';
   constructor (private httpRequestService: HttpRequestService) { }
-  width = 1100;
+  width = 1083;
   height = 500;
   type = 'pie3d';
   dataFormat = 'json';

@@ -12,7 +12,7 @@ export class WnviromentalComponent implements OnInit {
   constructor (private httpRequestService: HttpRequestService) {
   }
 
-  width = 1100;
+  width = 1083;
   height = 500;
   type = 'pie3d';
   dataFormat = 'json';
