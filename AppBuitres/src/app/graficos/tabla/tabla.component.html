@@ -1,8 +1,3 @@
-<table class="table table-responsive table-condensed">
-    <tr>
-      <th *ngFor="let label of lineChartLabels">{{label}}</th>
-    </tr>
-    <tr *ngFor="let d of lineChartData">
-      <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
-    </tr>
-  </table>
+<hr>
+  <ul class="list-group"></ul>
+      <li class="text-center list-group-item " *ngFor="let label of lineChartData"> <h2>{{label}}</h2> </li>

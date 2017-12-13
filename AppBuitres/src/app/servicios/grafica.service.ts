@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpRequestService } from '../servicios/http-request.service';
 import { Headers, Http, Response } from '@angular/http';
-import 'rxjs/Rx';
 
 @Injectable()
 export class GraficaService {
