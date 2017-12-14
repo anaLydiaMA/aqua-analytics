@@ -3,11 +3,15 @@ var indexes = require('../cloudant/cloudant_indexes').object_indexes;
 var db = cloudant.db.use('data');
 
 var functions = (function() {
-  var get = function(doc) {
+  var get = function(doc,newData) {
     return new Promise(function(fulfill, reject) {
       db.get(doc, function(err, data) {
         if (data) {
-          fulfill(data.graph);
+          if(newData){
+            fulfill(data.new_graph);
+          } else {
+            fulfill(data.graph);
+          }
         } else {
           reject(204);
         }
